@@ -1,0 +1,104 @@
+.list {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.cat {
+	position: absolute;
+	margin-top: 475px;
+	font-weight: bold;
+	width: 400px;
+	font-size: 30px;
+	text-align: center;
+	color: black;
+}
+.pic {
+	margin-top: 50px;
+	width: 400px;
+}
+body{
+	margin-left: 68px;
+	margin-right: 68px;
+	margin-top: 100px;
+	text-align: center;
+}
+.shop {
+	position: absolute;
+	background-color: white;
+	border: none;
+	padding: 15px 80px;
+	margin-top: 550px;
+	margin-left: 80px;
+	font-size: 18px;
+}
+.shop:hover {
+	background-color: rgb(31, 49, 58);
+	color: white;
+}
+.insta {
+	width: 600px;
+	font-weight: 400;
+	display: inline-block;
+	padding-top: 20px;
+	line-height: 60px;
+	font-size: 30px;
+	font-family: Circular-Bold-S,HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,Sans-Serif;
+}
+.insta p {
+	font-size: 22px;
+	line-height: 30px;
+}
+.instagram {
+	width: 324.075px;
+	height:340.075px;
+}
+.photos {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.photo__card{
+  position: relative;
+}
+
+.team__overlay__text{
+  position: absolute;
+  width: 324.075px;
+  height:340.075px;
+  top: 0;
+  left: 0;
+  display: flex;
+  
+  align-items: flex-end;
+  opacity: 0;
+  color: #ffffff;
+}
+
+.team__content__inner h6{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.photo__card:hover .team__overlay__text{
+  opacity: 4;
+  animation: text .7s;
+  background-color: rgba(31,49,58,.7);
+  transition: opacity .25s ease;
+}
+.instalink {
+  text-decoration: none;
+  color: white;
+
+}
+.instalink:hover {
+	color: grey;
+}
+h6 {
+	margin-left: 40px;
+}
