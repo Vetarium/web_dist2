@@ -15,14 +15,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientJsonpModule} from '@angular/common/http';
 import { ShareModule } from '@ngx-share/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommentsComponent } from './comments/comments.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo:'/categories', pathMatch: 'full'},
   {path: 'categories', component: CategoriesComponent},
   {path: 'categories/:categoryId/products', component: ProductsComponent},
-  {path: 'categories/:categoryId/products/:productId/description', component: ProductDetailComponent} 
-]; 
+  {path: 'categories/:categoryId/products/:productId/description', component: ProductDetailComponent}
+];
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ const routes: Routes = [
     CategoriesComponent,
     FooterComponent,
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ const routes: Routes = [
     HttpClientModule,
     HttpClientJsonpModule,
     FontAwesomeModule,
+    ReactiveFormsModule,
     ShareModule,
     RouterModule.forRoot(routes)],
   exports: [RouterModule],

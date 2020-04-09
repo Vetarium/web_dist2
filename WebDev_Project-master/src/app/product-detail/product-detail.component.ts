@@ -13,6 +13,7 @@ import { faVk } from '@fortawesome/free-brands-svg-icons/faVk';
 import { faTelegramPlane } from '@fortawesome/free-brands-svg-icons/faTelegramPlane';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faGooglePlusG } from '@fortawesome/free-brands-svg-icons/faGooglePlusG';
+import {CommentsService} from '../comments.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -34,13 +35,14 @@ export class ProductDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute,
   private productsService: ProductsService,
   private location: Location,
-  public share: ShareService) { }
+  public share: ShareService,
+  public comment: CommentsService) { }
 
   getProduct(): void {
   	  const id1 = +this.route.snapshot.paramMap.get('categoryId');
   	  const id2 = +this.route.snapshot.paramMap.get('productId');
       this.productsService.getProductFromProducts(id1, id2).subscribe(product => this.products = product);
-  } 
+  }
 
   ngOnInit(): void {
   	this.getProduct();
