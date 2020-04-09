@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ProductsService } from '../products.service';
 import { ShareService } from '@ngx-share/core';
+import { Comment } from '../comment';
 
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
@@ -13,6 +14,7 @@ import { faVk } from '@fortawesome/free-brands-svg-icons/faVk';
 import { faTelegramPlane } from '@fortawesome/free-brands-svg-icons/faTelegramPlane';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faGooglePlusG } from '@fortawesome/free-brands-svg-icons/faGooglePlusG';
+import {ToastrService} from 'ngx-toastr';
 import {CommentsService} from '../comments.service';
 
 @Component({
@@ -23,6 +25,7 @@ import {CommentsService} from '../comments.service';
 export class ProductDetailComponent implements OnInit {
 
   products: Product;
+  comment: string;
   faTwitter = faTwitter;
   faFacebookF = faFacebookF;
   faPinterestP = faPinterestP;
@@ -33,19 +36,24 @@ export class ProductDetailComponent implements OnInit {
   faGooglePlusG = faGooglePlusG;
 
   constructor(private route: ActivatedRoute,
-  private productsService: ProductsService,
-  private location: Location,
-  public share: ShareService,
-  public comment: CommentsService) { }
+              private commentsService: CommentsService,
+              public productsService: ProductsService,
+              private location: Location,
+              public share: ShareService,
+              private toastr: ToastrService) { }
 
   getProduct(): void {
   	  const id1 = +this.route.snapshot.paramMap.get('categoryId');
   	  const id2 = +this.route.snapshot.paramMap.get('productId');
-      this.productsService.getProductFromProducts(id1, id2).subscribe(product => this.products = product);
+     this.productsService.getProductFromProducts(id1, id2).subscribe(product => this.products = product);
   }
 
   ngOnInit(): void {
   	this.getProduct();
+  }
+
+  ShowToast() {
+    this.toastr.error('Please, SIGN IN in order to use BAG');
   }
 
 }

@@ -1,8 +1,7 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Category, categories } from '../categories';
 import { of } from 'rxjs';
-import { Photo, photos } from "../photos"
+import { Photo, photos } from '../photos';
 
 
 @Component({
@@ -11,16 +10,17 @@ import { Photo, photos } from "../photos"
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
+  p: Photo = {} as any;
   photos: Photo[];
   categories: Category[];
-  imageClicked: boolean = true;
+  imageClicked = true;
   constructor() { }
 
   private getCategories(): void {
     of(categories).subscribe(category => this.categories = category);
 }
   private getPhotos(): void {
-    of(photos).subscribe(photo => this.photos = photo)
+    of(photos).subscribe(photo => this.photos = photo);
   }
 
   ngOnInit(): void {
@@ -28,14 +28,14 @@ export class CategoriesComponent implements OnInit {
     this.getPhotos();
   }
 
-  showInstagram(){
+
+  closeForm() {
     this.imageClicked = !this.imageClicked;
   }
 
-  closeForm(){
+  showInstagram(photo) {
+    this.p = photo
     this.imageClicked = !this.imageClicked;
   }
-
-
 
 }

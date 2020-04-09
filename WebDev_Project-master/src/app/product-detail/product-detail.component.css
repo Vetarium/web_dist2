@@ -36,3 +36,22 @@ button {
 	margin-right: 20px;
 	margin-top: 20px;
 }
+
+.btn__bag{
+  color: #ffffff;
+  padding: 20px 0px;
+  margin-top: -7px;
+  background-color: #FECDD3;
+  font-weight: 600;
+  font-size: 18px;
+  width: 335px;
+  text-align: center;
+  justify-content: center;
+  outline: none;
+}
+
+.btn__bag:hover{
+  background-color: #ED1385;
+}
+
+

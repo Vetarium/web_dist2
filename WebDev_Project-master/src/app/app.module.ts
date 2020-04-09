@@ -15,15 +15,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientJsonpModule} from '@angular/common/http';
 import { ShareModule } from '@ngx-share/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ReactiveFormsModule } from '@angular/forms';
+
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { from } from 'rxjs';
+import { BagComponent } from './bag/bag.component';
 import { CommentsComponent } from './comments/comments.component';
+import {FormsModule} from '@angular/forms';
 
 
 const routes: Routes = [
-  {path: '', redirectTo:'/categories', pathMatch: 'full'},
+  {path: '', redirectTo: '/categories', pathMatch: 'full'},
   {path: 'categories', component: CategoriesComponent},
   {path: 'categories/:categoryId/products', component: ProductsComponent},
-  {path: 'categories/:categoryId/products/:productId/description', component: ProductDetailComponent}
+  {path: 'categories/:categoryId/products/:productId/description', component: ProductDetailComponent},
+  {path: 'categories/:bag', component: BagComponent}
 ];
 
 @NgModule({
@@ -34,6 +41,7 @@ const routes: Routes = [
     FooterComponent,
     ProductsComponent,
     ProductDetailComponent,
+    BagComponent,
     CommentsComponent
   ],
   imports: [
@@ -42,9 +50,15 @@ const routes: Routes = [
     HttpClientModule,
     HttpClientJsonpModule,
     FontAwesomeModule,
-    ReactiveFormsModule,
     ShareModule,
-    RouterModule.forRoot(routes)],
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      preventDuplicates: true
+    }),
+    RouterModule.forRoot(routes),
+    FormsModule
+  ],
   exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]

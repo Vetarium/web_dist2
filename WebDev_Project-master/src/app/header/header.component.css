@@ -17,6 +17,7 @@ svg {
 
 .sign:hover {
   color: #d602f2;
+  border-color: #d602f2;
 }
 #reference {
   position: relative;
@@ -36,16 +37,33 @@ svg {
 
 .menu:hover {
   color: #d602f2;
-  border-color: #d602f2; 
+  border-color: #d602f2;
 }
+
+.bag:hover {
+  color: #d602f2;
+  border-color: #d602f2;
+}
+
 .menu:disabled {
   color: white;
 }
+
+.bag {
+  margin-top: 10px;
+  position: absolute;
+  margin-left: 420px;
+  padding: 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  outline: none;
+}
+
 body {
-  background-color: white;
+    background-color: white;
 		z-index: 1;
 	  font-family: Helvetica, Sans-Serif;
-	  position: sticky;
+	  /*position: sticky;*/
   	top: 0px;
     display: flex;
     flex-wrap: wrap;
@@ -116,6 +134,7 @@ span {
   background: #ffffff;
   box-sizing: content-box;
 }
+
 
 .modal__inner__text div{
   margin-bottom: 40px;
@@ -195,6 +214,7 @@ span {
   background-color: #1F313A;
   width: 100%;
   text-align: center;
+  justify-content: center;
   border: none;
   padding: 15px;
   color: #ffffff;
@@ -259,7 +279,7 @@ span {
 .fa-facebook:hover {
   color: white;
   background-color: #3b5998;
-} 
+}
 .menu__inner{
   text-align: center;
   margin-top: 60px;

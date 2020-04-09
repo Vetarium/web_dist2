@@ -9,10 +9,15 @@ import { of } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  isClicked : boolean = true;
-  menuOpened: boolean = true;
-  isCreate: boolean = true;
+  isClicked = true;
+  menuOpened = true;
+  isCreate = true;
   categories: Category[];
+  username: string;
+  password: string;
+  repassword: string;
+  email: string;
+  country: string;
 
   constructor() { }
 

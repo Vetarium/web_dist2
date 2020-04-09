@@ -1,0 +1,21 @@
+.comments button{
+  display: block;
+}
+
+.comments textarea{
+  padding: 5px;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.btn__add{
+  padding: 15px 25px;
+  background-color: #449D44;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}

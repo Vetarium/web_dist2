@@ -1,8 +1,8 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-  
   <button class = "menu" style="font-size:24px" (click)="showMenu()"><i class="fa fa-bars"></i><span>&#8194;Menu</span></button>
-  
+
   <div *ngIf="!menuOpened" class="menu__bar">
     <a id = "reference" href = "#">
     <svg viewBox="0 0 208 52" xmlns="https://www.w3.org/2000/svg">
@@ -18,7 +18,7 @@
         <div class="menu__card1">
           <p class="first__row" style = "font-size: 30px">Clothing</p>
           <a href="/categories/1/products"><p>Skirts</p></a>
-          <a href="/categories/2/products"><p>Dresses</p></a> 
+          <a href="/categories/2/products"><p>Dresses</p></a>
           <a href="/categories/3/products"><p>Coats & Jackets</p></a>
           <a href="/categories/4/products"><p>Trousers</p></a>
           <a href="/categories/5/products"><p>Tops</p></a>
@@ -51,7 +51,7 @@
         </div>
   </div>
 
-	<a href = "#"> 
+	<a href = "#">
     <svg viewBox="0 0 208 52" xmlns="https://www.w3.org/2000/svg">
       <title>Monki Logo Medium</title>
         <g fill="none" fill-rule="evenodd">
@@ -63,7 +63,7 @@
 
 	<button class = "sign" (click)="showForm()"><span>Sign in</span></button>
   <div *ngIf="!isClicked" id = "isClicked">
-    <form class="modal">
+    <form class="modal form-group" method="post">
       <div class="modal__backdrop"></div>
         <div class="modal__inner">
           <div><button class="btn__close" (click)="closeForm()">x</button></div>
@@ -77,13 +77,13 @@
               <label>Enter User name</label>
             </div>
             <div>
-              <input type="text" placeholder="Username" class="active">
+              <input type="text" placeholder="Username" class="active form-control" [(ngModel)]="username">
             </div>
             <div>
               <label>Password</label>
             </div>
             <div>
-              <input type="password" placeholder="Password" class="active">
+              <input type="password" placeholder="Password" class="active form-control" [(ngModel)]="password">
             </div>
               <div>
                 <input type="checkbox" checked> <span class="inside__check">Keep me signed in</span>
@@ -101,7 +101,7 @@
   </div>
 
   <div *ngIf="!isCreate">
-    <form class="modal">
+    <form class="modal" method="post">
       <div class="modal__backdrop"></div>
         <div class="modal__inner__create">
           <div><button class="btn__close" (click)="closeCreateForm()">x</button></div>
@@ -112,16 +112,16 @@
             </div>
             <div class="inside__info">We´ll send you order confirmation to this email</div>
             <div>
-              <input type="text" placeholder="Email address" class="active">
+              <input type="text" placeholder="Email address" class="active form-control" [(ngModel)]="email">
             </div>
             <div>
-              <input type="password" placeholder="Password" class="active">
+              <input type="password" placeholder="Password" class="active" [(ngModel)]="password">
             </div>
             <div>
-              <input type="password" placeholder="Confirm Password" class="active">
+              <input type="password" placeholder="Confirm Password" class="active" [(ngModel)]="repassword">
             </div>
             <div class="selector">
-              <select>
+              <select [(ngModel)]="country">
                 <option value="0">Select country:</option>
                 <option value="1">Australia</option>
                 <option value="2">Canada</option>
@@ -147,5 +147,9 @@
         </div>
     </form>
   </div>
+
+  <button class = "bag" style="font-size:24px"  routerLink="categories/bag"><span>Bag</span></button>
+
+
 
 </body>

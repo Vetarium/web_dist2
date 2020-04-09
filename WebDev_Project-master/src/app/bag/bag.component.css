@@ -1,0 +1,47 @@
+.content{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.content__inner h2{
+  font-size: 32px;
+  line-height: 40px;
+  color: #1f313a;
+  font-weight: 400;
+}
+
+.content__inner button{
+  width: 380px;
+  height: 60px;
+  background-color: #1f313a;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__inner button:hover{
+  background: linear-gradient(45deg,#ed1385 0,#d602f2 50%,#3700ff 100%);
+  transition: 0.7s;
+}
+
+.popular__products{
+  height: 400px;
+}
+
+.card__inner{
+  display: flex;
+}
+
+.card__inner image{
+  width: 300px;
+  height: 300px;
+}
+
+.card{
+  width: 33.3%;
+  box-sizing: border-box;
+}

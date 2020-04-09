@@ -9,7 +9,6 @@ export class Category {
 	constructor(id: number, name: string, link: string, products: Product[]){
 		this.id = id;
 		this.name = name;
-    // tslint:disable-next-line:indent
 		this.link = link;
 		this.products = products;
 	}

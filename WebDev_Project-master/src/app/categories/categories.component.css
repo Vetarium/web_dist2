@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 .list {
 	display: flex;
 	justify-content: flex-start;
@@ -73,7 +75,7 @@ body{
   top: 0;
   left: 0;
   display: flex;
-  
+
   align-items: flex-end;
   opacity: 0;
   color: #ffffff;
@@ -101,4 +103,124 @@ body{
 }
 h6 {
 	margin-left: 40px;
+}
+
+.modal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center
+}
+
+
+.modal__inner{
+  background: linear-gradient(45deg,#ed1385 0,#d602f2 50%,#3700ff 100%);
+  position: absolute;
+  z-index: 2;
+  padding: 0px 10px 60px;
+  width: 970px;
+  height: 450px;
+}
+
+.modal__inner__text{
+  display: flex;
+  margin-top: -20px;
+  padding: 0px;
+  background: #ffffff;
+  box-sizing: content-box;
+}
+
+.modal__backdrop{
+  background-color: #ffffff;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.inst__page__inner__left{
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.inst__page__inner__left img{
+  width: 100%;
+  margin-bottom: -4px;
+}
+
+.inst__page__inner__right{
+  width: 50%;
+}
+
+.btn__close{
+  background-color: #4300FE;
+  margin-left: 940px;
+  color: #ffffff;
+  outline: none;
+  text-align: center;
+  align-items: center;
+  transform: scale(1.002);
+}
+
+.btn__close:hover{
+  background-color: #4300FE;
+}
+
+.instagram__page{
+  text-align: left;
+  margin-top: 20px;
+}
+
+.insta__icon{
+  margin-left: 30px;
+  display: inline-block;
+  font-size: 70px;
+}
+
+.user__info{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.insta__name{
+  display: block;
+  font-size: 11px;
+  color: #777777;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.insta__link{
+  color: #a50aff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.insta__link:hover{
+  border-bottom: 1px solid #a50aff;
+}
+
+.title__insta{
+  padding-top: 20px;
+}
+
+.inner__photo{
+  margin-top: 40px;
+  width: 200px;
+  height: 300px;
+}
+
+.inner__text{
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #1F313A;
 }
